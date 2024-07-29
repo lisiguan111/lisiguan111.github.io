@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #fff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        body,
+        :root {
+            height: 100%;
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+
+        .bgFasle {
+            display: block;
+            margin: 0 auto;
+            height: 100vh;
+        }
+
+        .login_box {
+            height: 23vh;
+            width: 380px;
+            position: absolute;
+            top: 20.2vh;
+            left: 51.5%;
+            /* background-color: red; */
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        input {
+            margin-bottom: 2.2vh;
+            height: 4vh;
+            display: block;
+            width: 100%;
+            border: 0 solid #eee;
+            outline: none;
+            font-size: 18px;
+        }
+
+        .btn {
+            margin-bottom: 0;
+            margin-top: auto;
+            height: 5vh;
+            background-color: #5092db;
+            text-align: center;
+            font-size: 18px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <img src="./img/login.png" alt="" class="bgFasle">
+    <div class="login_box">
+        <input type="text">
+        <input type="password" class="mypas"> 
+        <input type="button" class="btn" value="登录">
+    </div>
+    <script>
+        document.querySelector('.btn').onclick = function () {
+            window.location.href = './main.html'
+        }
+        document.querySelector(".bgFasle").addEventListener("click", function () {
+            // 控制密码框可见
+            if (document.querySelector(".mypas").type == "password") {
+                document.querySelector(".mypas").type = "text"
+            } else {
+                document.querySelector(".mypas").type = "password"
+            }
+        })
+    </script>
+</body>
+
+</html>
